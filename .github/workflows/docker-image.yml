@@ -19,7 +19,7 @@ jobs:
       run: |
            timestamp=$(date +'%d%m%y%h%m%s')
            echo ${{ secrets.PASSWORD}} | sudo docker build . -t website:$timestamp  
-           echo ${{ secrets.PASSWORD}} | sudo docker run -itd  -p5000:80 website:$timestamp 
+           #echo ${{ secrets.PASSWORD}} | sudo docker run -itd  -p5000:80 website:$timestamp 
            echo ${{ secrets.PASSWORD}} | sudo docker tag website ntsanand/website:$timestamp
            echo ${{ secrets.PASSWORD}} | sudo docker login -u ntsanand -p Anand1997@ $DOCKER_REGISTRY 
            echo ${{ secrets.PASSWORD}} | sudo docker push ntsanand/website:$timestamp
