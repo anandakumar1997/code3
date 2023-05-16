@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: Anand
     steps:
       - name: check out the code
       - uses: actions/checkout@v3
