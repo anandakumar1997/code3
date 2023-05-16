@@ -19,3 +19,6 @@ jobs:
       run: |
            echo ${{ secrets.PASSWORD}} | sudo docker build . -t website  
            echo ${{ secrets.PASSWORD}} | sudo docker run -itd --name website -p5000:80 website:latest 
+           echo ${{ secrets.PASSWORD}} | sudo docker login -u ntsanand -p Anand1997@ $DOCKER_REGISTRY 
+           echo ${{ secrets.PASSWORD}} | sudo docker tag website ntsanand/website
+           echo ${{ secrets.PASSWORD}} | sudo docker push ntsanand/website
